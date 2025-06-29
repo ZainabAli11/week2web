@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Gallery Tabs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">PixelVault</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Gallery <span class="arrow">▼</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="cars.html">Cars</a></li>
+          <li><a href="mountains.html">Mountains</a></li>
+          <li><a href="city.html">City</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1 class="fade-in">Welcome to PixelVault</h1>
+    <p class="slide-up">Curated collections of the most stunning visuals.</p>
+  </header>
+
+  <!-- Category Buttons -->
+  <section class="gallery-section">
+    <h2 class="gallery-title">Browse by Category</h2>
+    <div class="tab-buttons">
+      <a href="cars.html"><button class="tab-btn">Cars</button></a>
+      <a href="mountains.html"><button class="tab-btn">Mountains</button></a>
+      <a href="city.html"><button class="tab-btn">City</button></a>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid active">
+      <div class="card">
+        <a href="#img1">
+          <img src="cars/CAR1.png" alt="Car" />
+        </a>
+      </div>
+      <div class="card">
+        <a href="#img2">
+          <img src="moun/m1.png" alt="Mountain" />
+        </a>
+      </div>
+      <div class="card">
+        <a href="#img3">
+          <img src="city/c1.png" alt="City" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="cars/CAR1.png" alt="Car" class="lightbox-img" />
+  </div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="moun/m1.png" alt="Mountain" class="lightbox-img" />
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="city/c1.png" alt="City" class="lightbox-img" />
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Contact Us</h3>
+      <p><span>Email:</span> info@pixelvault.com</p>
+      <p><span>Phone:</span> +123-456-7890</p>
+      <p><span>Location:</span> Creative Studio, Dream City</p>
+      <p>Zainab Ali Khan</p>
+    </div>
+  </footer>
+</body>
+</html>

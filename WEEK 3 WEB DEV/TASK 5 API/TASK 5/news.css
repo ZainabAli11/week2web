@@ -1,0 +1,176 @@
+/* Base layout and background */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #9b7ebd, #f49bab);
+  color: #2a2a2a;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Slim purple header */
+header {
+  background: #6f4bb6;
+  color: white;
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(111, 75, 182, 0.4);
+  text-shadow: 0 0 3px #b296d0;
+  user-select: none;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* News grid */
+#newsList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  #newsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  #newsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Each news card */
+#newsList li {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(100, 80, 160, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+#newsList li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(111, 75, 182, 0.25);
+}
+
+#newsList img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Card content */
+#newsList .card-content {
+  padding: 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#newsList .card-content a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6a4fb1;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+#newsList .card-content a:hover {
+  text-decoration: underline;
+}
+
+#newsList .card-content small {
+  color: #888;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+#newsList .card-content .description {
+  color: #4b3b72;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #1d1d1d;
+  color: #ccc;
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+.footer-links {
+  margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #9B7EBD;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.footer-links a:hover {
+  color: #F49BAB;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+/* Navbar inside header */
+.navbar {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffe1e0;
+}

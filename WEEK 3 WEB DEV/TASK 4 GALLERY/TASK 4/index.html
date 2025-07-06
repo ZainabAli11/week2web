@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreamGallery Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">               <!-- default theme -->
+
+  <header class="header">
+    <h2>DreamGallery</h2>
+    <button id="themeToggle" aria-label="Toggle light / dark">🌙</button>
+  </header>
+
+  <main class="carousel-wrapper">
+    <div class="carousel-container glass">
+      <button class="nav-btn" id="prevBtn">❮</button>
+      <div class="carousel-slide" id="carousel"></div>
+      <button class="nav-btn" id="nextBtn">❯</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025| Zainab Ali Khan |All rights reserved.</p>
+  </footer>
+
+  <!-- zoom overlay -->
+  <div id="overlay"><img id="overlayImg" alt=""></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* --- Reset and base --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f7fc;
+  color: #2a2a2a;
+}
+
+/* Flex wrapper for sticky footer */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Let main grow to fill space */
+main {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(90deg, #7F55B1, #9B7EBD);
+  color: white;
+  padding: 24px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(127, 85, 177, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+/* Section title */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #7F55B1;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Individual nav link buttons */
+.nav-links a {
+  text-decoration: none;
+  background: white;
+  border: 2px solid #7F55B1;
+  color: #7F55B1;
+  padding: 16px 28px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(155, 126, 189, 0.15);
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #7F55B1;
+  color: white;
+  box-shadow: 0 6px 14px rgba(127, 85, 177, 0.3);
+  transform: scale(1.03);
+}
+
+/* Footer styles */
+footer {
+  background-color: #1d1d1d;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer links container */
+footer .footer-links {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Footer links */
+footer .footer-links a {
+  color: #9B7EBD;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #F49BAB;
+}
+
+/* Footer note */
+footer .footer-note {
+  font-size: 0.85rem;
+  color: #888;
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Optional header and footer if you want to add */
+header, footer {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 10px 0 20px;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #00ffe0, #7f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  margin: 15px 0 5px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #00ffe0;
+  padding-bottom: 2px;
+}
+
+#myDiv {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 95%;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1 1 140px;
+  min-width: 120px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffffffcc, #eeeeeecc);
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00ffe0, #7f00ff);
+  color: #222;
+  transform: translateY(-4px) scale(1.05);
+}
+
+#paragraphContainer {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#paragraphContainer p {
+  margin: 5px 0;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #00ffe0;
+  border-radius: 6px;
+  white-space: pre-line;
+  color: #00ffe0;
+  font-size: 14px;
+}
+
+.glow {
+  box-shadow: 0 0 20px 8px rgba(0, 255, 224, 0.7);
+}

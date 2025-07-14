@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="top-bar">
+      <strong>💬 Chatbot</strong>
+      <div class="controls">
+        <select id="user-select"></select>
+        <button id="theme-toggle">🌗</button>
+        <button onclick="logout()">🚪</button>
+      </div>
+    </div>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+      <input type="text" id="msg-input" placeholder="Type a message...">
+      <input type="file" id="file-input" accept="image/*">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+  <div id="zoom-modal">
+    <span class="close-btn">&times;</span>
+    <div class="zoom-content">
+      <img id="zoom-img" src="" alt="Zoomed Image">
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back 👋</h2>
+    <p>Enter your name and pick an avatar to start chatting</p>
+
+    <form onsubmit="event.preventDefault(); login()">
+      <input type="text" id="username" placeholder="Enter your name..." required />
+
+      <select id="avatar" required>
+        <option value="" disabled selected>Select an avatar</option>
+        <option>😎</option>
+        <option>🤖</option>
+        <option>🧚‍♀️</option>
+        <option>🐱</option>
+        <option>🐶</option>
+        <option>🦄</option>
+      </select>
+
+      <button type="submit">Enter Chat 💬</button>
+    </form>
+
+    <button id="theme-toggle" class="theme-btn">🌗 Toggle Theme</button>
+  </div>
+
+  <script>
+    document.body.classList.add(localStorage.getItem('theme') || 'light');
+
+    document.getElementById("theme-toggle").onclick = () => {
+      const current = document.body.classList.contains("light") ? "light" : "dark";
+      const newTheme = current === "light" ? "dark" : "light";
+      document.body.classList.replace(current, newTheme);
+      localStorage.setItem("theme", newTheme);
+    };
+
+    function login() {
+      const name = document.getElementById("username").value.trim();
+      const avatar = document.getElementById("avatar").value;
+      if (name && avatar) {
+        localStorage.setItem("chat_username", name);
+        localStorage.setItem("chat_avatar", avatar);
+        window.location.href = "/chat.html";
+      } else {
+        alert("Please enter your name and choose an avatar!");
+      }
+    }
+  </script>
+</body>
+</html>

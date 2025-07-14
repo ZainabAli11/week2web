@@ -1,0 +1,247 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: #f9f2ff;
+  color: #3a2b52;
+}
+
+body.dark {
+  background: #1e1033;
+  color: #e0d8ff;
+}
+
+.login-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+body.dark .login-container {
+  background: #2c1a4b;
+}
+
+.login-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  margin-bottom: 20px;
+  color: #666;
+}
+body.dark .login-container p {
+  color: #aaa;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-container input,
+.login-container select {
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 2px solid #8c5eff;
+  background: #faf7ff;
+  color: #3a2b52;
+}
+body.dark .login-container input,
+body.dark .login-container select {
+  background: #311f50;
+  color: #e0d8ff;
+  border-color: #a178ff;
+}
+
+.login-container button[type="submit"] {
+  background: linear-gradient(135deg, #8c5eff, #6b4cd1);
+  color: white;
+  font-weight: bold;
+  padding: 14px;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.login-container button[type="submit"]:hover {
+  background: linear-gradient(135deg, #7b51e0, #583db5);
+}
+
+.theme-btn {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+.chat-container {
+  max-width: 1000px;
+  height: 90vh;
+  margin: 40px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+body.dark .chat-container {
+  background: #2c1a4b;
+}
+
+input, select, button {
+  margin: 10px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 17px;
+  border: 2px solid #8c5eff;
+  outline: none;
+  background: #faf7ff;
+  color: #3a2b52;
+  transition: 0.3s;
+}
+body.dark input,
+body.dark select,
+body.dark button {
+  background: #311f50;
+  border-color: #a178ff;
+  color: #e0d8ff;
+}
+button {
+  background: #8c5eff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background: #7a4de0;
+}
+
+#chat-box {
+  flex: 1;
+  overflow-y: auto;
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 14px;
+  background: #faf7ff;
+}
+body.dark #chat-box {
+  background: #311f50;
+}
+
+.message {
+  max-width: 70%;
+  padding: 16px 22px;
+  margin: 14px 0;
+  border-radius: 18px;
+  font-size: 17px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+  clear: both;
+}
+
+.message.left {
+  background: #e8dfff;
+  color: #3a2b52;
+  float: left;
+  border-top-left-radius: 4px;
+}
+
+.message.right {
+  background: #d0f4ff;
+  color: #133144;
+  float: right;
+  border-top-right-radius: 4px;
+}
+
+body.dark .message.left {
+  background: #3d2c5d;
+  color: #e0d8ff;
+}
+body.dark .message.right {
+  background: #274b5f;
+  color: #e0f7ff;
+}
+
+.message img.chat-img {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 8px;
+  cursor: zoom-in;
+  transition: transform 0.3s;
+}
+.message img.chat-img:hover {
+  transform: scale(1.05);
+}
+
+#zoom-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+#zoom-modal .zoom-content {
+  background: #f5efff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  max-width: 90%;
+  max-height: 90%;
+  animation: zoomIn 0.3s ease;
+}
+body.dark #zoom-modal .zoom-content {
+  background: #2c1a4b;
+}
+
+#zoom-modal img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+#zoom-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #8c5eff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+#zoom-modal .close-btn:hover {
+  transform: scale(1.2);
+  color: #6d3fe2;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

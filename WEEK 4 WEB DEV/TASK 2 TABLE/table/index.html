@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meet Pakistan - Dynamic Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Meet Pakistan</h1>
+  </header>
+
+  <main>
+    <section class="table-section">
+      <h2>Dynamic Table with Sorting & Filtering</h2>
+      <input type="text" id="filterInput" placeholder="Type to filter...">
+
+      <div class="sort-controls">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="">Select option</option>
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="age-asc">Age (Ascending)</option>
+          <option value="age-desc">Age (Descending)</option>
+          <option value="city-asc">City (A-Z)</option>
+          <option value="city-desc">City (Z-A)</option>
+        </select>
+      </div>
+
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ahmed</td><td>25</td><td>Lahore</td></tr>
+          <tr><td>Fatima</td><td>22</td><td>Karachi</td></tr>
+          <tr><td>Ali</td><td>28</td><td>Islamabad</td></tr>
+          <tr><td>Zara</td><td>24</td><td>Rawalpindi</td></tr>
+          <tr><td>Hassan</td><td>30</td><td>Faisalabad</td></tr>
+          <tr><td>Ayesha</td><td>26</td><td>Multan</td></tr>
+          <tr><td>Usman</td><td>27</td><td>Quetta</td></tr>
+          <tr><td>Mariam</td><td>23</td><td>Peshawar</td></tr>
+          <tr><td>Bilal</td><td>29</td><td>Sialkot</td></tr>
+          <tr><td>Sana</td><td>21</td><td>Hyderabad</td></tr>
+          <tr><td>Imran</td><td>32</td><td>Gujranwala</td></tr>
+          <tr><td>Rabia</td><td>20</td><td>Sargodha</td></tr>
+          <tr><td>Shahzaib</td><td>31</td><td>Bahawalpur</td></tr>
+          <tr><td>Hina</td><td>23</td><td>Abbottabad</td></tr>
+          <tr><td>Omer</td><td>27</td><td>Mirpur</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pakistani Data Table. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

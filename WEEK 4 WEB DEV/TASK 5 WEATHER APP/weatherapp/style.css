@@ -1,0 +1,141 @@
+/* === Import Poppins font === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* === Body & Background === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #d9e8ecff, #a9ccd6ff, #99d8ffff, #528ab4, #15719f);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #2e2e3a;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Page Wrapper === */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Header === */
+header {
+  background-color: #15719f;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(21, 113, 159, 0.3);
+  transition: background 0.3s ease;
+}
+
+/* === Search Box === */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #7bc7dd;
+  border-radius: 8px;
+  width: 220px;
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #15719f;
+  box-shadow: 0 0 8px rgba(21, 113, 159, 0.3);
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  background-color: #15719f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(21, 113, 159, 0.2);
+}
+
+.search-box button:hover {
+  background-color: #528ab4;
+  transform: translateY(-2px);
+}
+
+/* === Weather Cards === */
+#weather {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 30px;
+}
+
+.city-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #7bc7dd;
+  border-radius: 16px;
+  padding: 20px 18px;
+  box-shadow: 0 6px 20px rgba(21, 113, 159, 0.15);
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(21, 113, 159, 0.25);
+}
+
+.city-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #15719f;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.city-card p {
+  margin: 6px 0;
+  font-size: 0.96rem;
+  color: #3a3755;
+}
+
+/* === Footer === */
+footer {
+  background-color: #15719f;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 10px rgba(21, 113, 159, 0.2);
+}
